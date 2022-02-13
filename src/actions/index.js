@@ -21,7 +21,7 @@ export const signOut = () => {
   }
 }
 
-export const createStream = formValues => async (dispatch, getState) => {
+export const createPhoto = formValues => async (dispatch, getState) => {
   const { userId } = getState().auth;
 
   const response = await photos.post('/photos', { ...formValues, userId });
@@ -34,7 +34,7 @@ export const createStream = formValues => async (dispatch, getState) => {
   history.push('/')
 };
 
-export const listStreams = () => async dispatch => {
+export const listPhotos = () => async dispatch => {
   const response = await photos.get('/photos');
 
   dispatch({
@@ -43,7 +43,7 @@ export const listStreams = () => async dispatch => {
   });
 };
 
-export const getStream = photoId => async dispatch => {
+export const getPhoto = photoId => async dispatch => {
   const response = await photos.get(`/photos/${photoId}`);
 
   dispatch({
