@@ -43,9 +43,9 @@ class ListComponent extends React.Component {
             <h3>
               {this.renderLink(photo)}
             </h3>
-            <div className="shortDescription">
+            <p className="shortDescription">
               {photo.shortDescription}
-            </div>
+            </p>
           </div>
         </div>
       );

@@ -32,3 +32,15 @@
 .list-container .item:last-child {
   border-bottom: 1px solid rgba(34,36,38,.15);
 }
+
+@media screen and (max-width: 1024px) {
+  .content {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .shortDescription {
+    margin-left: 10px;
+    overflow: hidden;
+  }
+}
