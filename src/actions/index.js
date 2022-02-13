@@ -22,9 +22,7 @@ export const signOut = () => {
 }
 
 export const createPhoto = formValues => async (dispatch, getState) => {
-  const { userId } = getState().auth;
-
-  const response = await photos.post('/photos', { ...formValues, userId });
+  const response = await photos.post('/photos', { ...formValues });
 
   dispatch({
     type: CREATE_PHOTO,

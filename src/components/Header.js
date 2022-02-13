@@ -9,7 +9,7 @@ const Header = () => {
     <div className="ui secondary pointing menu header-menu">
       <div className="right menu">
         <Link to='/' className="item">
-          All Streams
+          All Photos
         </Link>
         <GoogleAuth />
       </div>

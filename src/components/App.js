@@ -3,6 +3,7 @@ import { Router, Route } from "react-router-dom";
 
 import Header from "./Header";
 import PhotosList from "./photos/PhotosList"
+import PhotoCreate from "./photos/PhotoCreate";
 
 import history from "../history";
 
@@ -13,6 +14,7 @@ const App = () => {
         <div>
           <Header />
           <Route path='/' exact component={PhotosList} />
+          <Route path='/photos/new' exact component={PhotoCreate} />
         </div>
       </Router>
     </div>
