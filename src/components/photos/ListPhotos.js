@@ -4,6 +4,7 @@ import React from "react";
 import { connect } from "react-redux";
 
 import { listPhotos } from "../../actions";
+  
 import ListComponent from './ListComponent';
 
 class PhotoList extends React.Component {

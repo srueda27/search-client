@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 
 import { createPhoto } from '../../actions';
+
 import FormComponent from "./FormComponent";
 
 class CreatePhoto extends React.Component {

@@ -9,7 +9,7 @@ class ListComponent extends React.Component {
     if (this.props.isSignedIn) {
       return (
         <div style={{ textAlign: 'right', margin:'10px' }} >
-          <Link to='/photos/new' className="ui button primary">Add Photo</Link>
+          <Link to='/photos/new' className="ui button teal">Add Photo</Link>
         </div>
       );
     }
@@ -29,6 +29,10 @@ class ListComponent extends React.Component {
   }
 
   renderList() {
+    if (!this.props.photos) {
+      return null
+    }
+
     return this.props.photos.map(photo => {
       return (
         <div className="item item-container" key={photo.id}>
@@ -49,8 +53,8 @@ class ListComponent extends React.Component {
   render() {
     return (
       <div>
-        <div className="ui divided list list-container">{this.renderList()}</div>
         {this.renderCreate()}
+        <div className="ui divided list list-container">{this.renderList()}</div>
       </div>
     );
   }

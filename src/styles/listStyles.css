@@ -18,10 +18,11 @@
 }
 
 .img-container img {
-  width: 30%;
+  width: 36%;
   height: 100%;
   object-fit: cover;
   border-radius: 50%;
+  box-shadow: 8px 2px 5px 1px grey;
 }
 
 .list-container .item {

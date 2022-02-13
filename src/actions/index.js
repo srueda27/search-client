@@ -4,8 +4,10 @@ import {
   SIGN_IN,
   SIGN_OUT,
   CREATE_PHOTO,
+  GET_PHOTO,
   LIST_PHOTOS,
-  GET_PHOTO
+  LIST_PHOTOS_TITLE,
+  CLEAR_LIST
 } from "./types"
 
 export const signIn = (userId) => {
@@ -50,3 +52,17 @@ export const getPhoto = photoId => async dispatch => {
   });
 };
 
+export const listPhotosByTitle = (title) => async dispatch => {
+  const response = await photos.get(`photos/title/${title}`);
+
+  dispatch({
+    type: LIST_PHOTOS_TITLE,
+    payload: response.data
+  });
+};
+
+export const clearList = () => dispatch => {
+  dispatch({
+    type: CLEAR_LIST
+  });
+};
