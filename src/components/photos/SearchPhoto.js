@@ -17,9 +17,9 @@ class SearchPhoto extends React.Component {
 
   render() {
     return (
-      <div>
-        <h3>Search Photos by Title</h3>
-        <SearchBar onSubmit={this.onSubmit} />
+      <div style={{ width: '90%', margin: 'auto' }}>
+        <h4>Search Photos by Title</h4>
+        <SearchBar onSubmit={this.onSubmit} label='' />
         <div className="ui divided list list-container">
           <ListComponent photos={this.props.photos} />
         </div>

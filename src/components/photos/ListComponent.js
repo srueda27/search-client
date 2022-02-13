@@ -8,7 +8,7 @@ class ListComponent extends React.Component {
   renderCreate() {
     if (this.props.isSignedIn) {
       return (
-        <div style={{ textAlign: 'right', margin:'10px' }} >
+        <div style={{ textAlign: 'right', margin: '10px' }} >
           <Link to='/photos/new' className="ui button teal">Add Photo</Link>
         </div>
       );
@@ -40,7 +40,9 @@ class ListComponent extends React.Component {
             <img alt={photo.title} src={photo.photoUrl} />
           </div>
           <div className="content">
-            {this.renderLink(photo)}
+            <h3>
+              {this.renderLink(photo)}
+            </h3>
             <div className="shortDescription">
               {photo.shortDescription}
             </div>
