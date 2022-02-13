@@ -4,12 +4,12 @@ import React from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 
-class ListCoomponent extends React.Component {
+class ListComponent extends React.Component {
   renderCreate() {
     if (this.props.isSignedIn) {
       return (
-        <div style={{ textAlign: 'right', marginTop:'10px' }} >
-          <Link to='/photos/new' className="ui button primary">Create Photo</Link>
+        <div style={{ textAlign: 'right', margin:'10px' }} >
+          <Link to='/photos/new' className="ui button primary">Add Photo</Link>
         </div>
       );
     }
@@ -19,7 +19,7 @@ class ListCoomponent extends React.Component {
     let title;
     if (this.props.isSignedIn) {
       title = (
-        <Link to={`/photos/edit/${photo.id}`}>{photo.title}</Link>
+        <Link to={`/photos/show/${photo.id}`}>{photo.title}</Link>
       );
     } else {
       title = photo.title
@@ -33,7 +33,7 @@ class ListCoomponent extends React.Component {
       return (
         <div className="item item-container" key={photo.id}>
           <div className='img-container'>
-            <img src={photo.photoUrl} />
+            <img alt={photo.title} src={photo.photoUrl} />
           </div>
           <div className="content">
             {this.renderLink(photo)}
@@ -62,4 +62,4 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps)(ListCoomponent);
+export default connect(mapStateToProps)(ListComponent);

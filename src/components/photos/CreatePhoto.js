@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import { createPhoto } from '../../actions';
 import FormComponent from "./FormComponent";
 
-class PhotoCreate extends React.Component {
+class CreatePhoto extends React.Component {
   onSubmit = (values) => {
     this.props.createPhoto(values);
   }
@@ -12,11 +12,11 @@ class PhotoCreate extends React.Component {
   render() {
     return (
       <div>
-        <h3>Create Photo</h3>
+        <h3>Add Photo</h3>
         <FormComponent onSubmit={this.onSubmit} />
       </div>
     );
   }
 }
 
-export default connect(null, { createPhoto })(PhotoCreate);
+export default connect(null, { createPhoto })(CreatePhoto);
