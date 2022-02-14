@@ -15,6 +15,7 @@ export default (state = {}, action) => {
     case CREATE_PHOTO:
       return { ...state, [action.payload.id]: action.payload };
     case LIST_PHOTOS_TITLE:
+      if(action.payload.length === 0) return {}
       return { ..._.mapKeys(action.payload, 'id') }
     case CLEAR_LIST:
       return {}

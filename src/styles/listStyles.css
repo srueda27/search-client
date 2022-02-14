@@ -36,11 +36,18 @@
 @media screen and (max-width: 1024px) {
   .content {
     display: flex;
+    justify-content: space-between;
     flex-direction: row;
+    font-size: small;
   }
 
   .shortDescription {
     margin-left: 10px;
     overflow: hidden;
+  }
+
+  .content h3 {
+    font-size: small;
+    text-overflow: ellipsis;
   }
 }
